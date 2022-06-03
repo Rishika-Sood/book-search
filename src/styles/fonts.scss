@@ -1,0 +1,39 @@
+@import './colors.scss';
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../../src/assets/font-family/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../../src/assets/font-family/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+
+// USAGE
+%body {
+    font-family: 'Montserrat-Regular';
+    font-size: 16px;
+    background-color: $_light-blue;
+}
+
+%h1 {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 48px;
+}
+
+%h2 {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 30px;
+}
+
+%genre-card {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+}
+
+%book-info {
+    font-family: 'Montserrat-Regular';
+    font-size: 12px;
+}

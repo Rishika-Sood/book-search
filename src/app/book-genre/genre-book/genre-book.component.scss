@@ -1,0 +1,59 @@
+@import "../../../styles/fonts.scss";
+@import "../../../styles/colors.scss";
+
+.genre-book {
+  &__header {
+    padding: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &-genre {
+        display: flex;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+      &--icon {
+        transform: scaleX(-1);
+        margin-right: 1rem;
+      }
+
+      &--heading {
+        @extend %h2;
+
+        color: $_blue;
+      }
+    }
+    &-search {
+        &--textbox {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            border: none;
+            background-color: $_light-blue;
+        }
+    }
+  }
+
+  &__content {
+    @extend %book-info;
+    background-color: $_light-blue;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.6rem;
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      width: 10rem;
+      padding: 0.8rem;
+
+      &--title {
+        font-family: "Montserrat-SemiBold";
+      }
+
+      &--author {
+        color: $_grey;
+      }
+    }
+  }
+}

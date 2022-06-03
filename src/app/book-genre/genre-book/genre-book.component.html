@@ -1,0 +1,33 @@
+<div class="genre-book">
+  <div class="genre-book__header">
+    <div class="genre-book__header-genre" (click)="backToHome()">
+      <img
+        class="genre-book__header-genre--icon"
+        src="../../assets/icons/Next.svg"
+      />
+      <div class="genre-book__header-genre--heading">{{ genre }}</div>
+    </div>
+    <div class="genre-book__header-search">
+      <input
+        class="genre-book__header-search--textbox"
+        type="text"
+        placeholder="Search.."
+        (input)="searchBooks($event)"
+      />
+    </div>
+  </div>
+  <div class="genre-book__content">
+    <div *ngFor="let book of books$ | async" class="genre-book__content-card">
+      <img
+        class="genre-book__content-card--icon"
+        src="../../assets/icons/Fiction.svg"
+      />
+      <div class="genre-book__content-card--title">
+        {{ book.title | uppercase }}
+      </div>
+      <div *ngFor="let author of book.authors">
+        <div class="genre-book__content-card--author">{{ author.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>
